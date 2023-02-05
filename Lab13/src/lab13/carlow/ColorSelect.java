@@ -16,7 +16,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 
 public class ColorSelect extends JFrame {
-	
+	// variables for the panel
 	private String  [] colours  = { "Red" , "Blue"  , "Green" , "Pink" };
 	private  JLabel label1 ;
 	private  JLabel label2;
@@ -38,7 +38,7 @@ public class ColorSelect extends JFrame {
 		JComboBox comboBox = new JComboBox(colours);
 		add(comboBox);
 		
-		//adding the labels  to the panel
+		//adding the labels and checkboxs  to the main panel
 		label1 = new JLabel ("Background");
 		background = new JCheckBox();
 		fieldPanel1 = new JPanel();
@@ -55,7 +55,7 @@ public class ColorSelect extends JFrame {
 		fieldPanel2.add(label2);
 		
 		
-		// adding the fieldpanel 
+		// adding the fieldpanel to the main panel
 	fieldPanel = new JPanel();
 	fieldPanel.setLayout( new BorderLayout());
 	fieldPanel.add(fieldPanel1 ,BorderLayout.EAST);
@@ -64,7 +64,7 @@ public class ColorSelect extends JFrame {
 	setLayout(new FlowLayout(FlowLayout.CENTER , 10,5)) ;
 	add(fieldPanel);
 	
-	// adding the buttons
+	// adding the buttons to the main panel
 	
 	buttonPanel = new JPanel ();
 	okButton = new JButton("Ok");
@@ -73,7 +73,7 @@ public class ColorSelect extends JFrame {
 	buttonPanel.add(okButton);
 	buttonPanel.add(cancelButton);
 	
-	
+	// adding the panels to the main panel
 	setLayout(new FlowLayout(FlowLayout.CENTER , 10,5)) ;
 	add(fieldPanel);
 	add(buttonPanel);
